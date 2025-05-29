@@ -20,7 +20,7 @@ def clear_data():
     encoder = OrdinalEncoder()
     df[cat_columns] = encoder.fit_transform(df[cat_columns])
 
-    # Сохраним очищенные данные
+
     df.to_csv("df_clear.csv", index=False)
 
 if __name__ == "__main__":
