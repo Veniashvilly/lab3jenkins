@@ -74,7 +74,7 @@ if __name__ == "__main__":
         with open("lr_model.pkl", "wb") as f:
             joblib.dump(best, f)
 
-        # Логика для нахождения пути к лучшей модели
+ 
         dfruns = mlflow.search_runs()
         path2model = dfruns.sort_values("metrics.r2", ascending=False).iloc[0]["artifact_uri"].replace("file://", "") + "/model"
         print(path2model)
